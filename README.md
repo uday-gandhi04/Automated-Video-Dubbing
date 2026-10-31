@@ -89,7 +89,7 @@ Automated-Video-Dubbing/
 ## **🔧 Installation & Setup**
 ### **1️⃣ Clone the Repository**
 ```bash
-https://github.com/uday-gandhi04/Automated-Video-Dubbing
+git clone https://github.com/uday-gandhi04/Automated-Video-Dubbing
 cd Automated-Video-Dubbing
 ```
 ### **2️⃣ Install Dependencies**
