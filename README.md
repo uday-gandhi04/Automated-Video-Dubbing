@@ -96,15 +96,26 @@ cd Automated-Video-Dubbing
 ```bash
 pip install -r requirements.txt
 ```
-### **3️⃣ Run Migrations (for Django)**
+### **3️⃣ Configure environment**
+The Django settings load variables from a root `.env` file for local development. A fresh local `SECRET_KEY` is generated in `.env`. Keep this file private; it is excluded from Git and Docker images. In deployment, set `SECRET_KEY` and the other variables through the hosting platform rather than copying the local `.env`. Set `MEDIA_ROOT` to the mount path of your persistent disk so uploaded media survives redeploys.
+
+```dotenv
+SECRET_KEY=generate-a-unique-secret-for-each-environment
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+CSRF_TRUSTED_ORIGINS=
+MEDIA_ROOT=media
+```
+
+### **4️⃣ Run Migrations (for Django)**
 ```bash
 python manage.py migrate
 ```
-### **4️⃣ Start the Server**
+### **5️⃣ Start the Server**
 ```bash
 python manage.py runserver
 ```
-### **5️⃣ Access the Web App**
+### **6️⃣ Access the Web App**
 - Open **http://127.0.0.1:8000/** in your browser  
 - Upload a video, select a language, and download the dubbed version  
 
@@ -159,4 +170,3 @@ Fork the repo, make changes, and submit a PR! 😊
 Open an issue on **GitHub**.  
 
 **Maintainer:** [Uday Gandhi](https://github.com/uday-gandhi04)  
-

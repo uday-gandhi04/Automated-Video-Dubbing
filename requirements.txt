@@ -1,0 +1,8 @@
+Django>=5.2,<5.3
+openai-whisper
+deep-translator
+gTTS
+pydub
+gunicorn
+whitenoise
+python-dotenv
